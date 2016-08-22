@@ -1,0 +1,44 @@
+#+TITLE: rtags layer
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../css/readtheorg.css" />
+
+#+CAPTION: logo
+
+# The maximum height of the logo should be 200 pixels.
+[[img/rtags.png]]
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+   - [[RTags][RTags]]
+   - [[Emacs configuration][Emacs configuration]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+  This layer enables support for =rtags= in C, C++, and objC modes. =RTags= is a
+  client/server application that indexes C/C++ code and keeps a persistent
+  file-based database of references, declarations, definitions, symbolnames etc.
+
+  For more information, see [[https://github.com/Andersbakken/rtags][RTags]]
+* Install
+** RTags
+   To use rtags, you first have to install [[https://github.com/Andersbakken/rtags][RTags]].
+   This requires:
+   - LLVM/Clang >= 3.3
+   - GCC/Clang >= 4.7/3.2
+   - cmake >= 2.8
+
+
+
+** Emacs configuration
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(rtags))
+#+end_src
+
+* Key bindings
+
+| Key Binding   | Description                        |
+|---------------+------------------------------------|
+| ~<SPC> m g g~ | Goto symbol at point               |
+| ~<SPC> m g u~ | Find references of symbol at point |
