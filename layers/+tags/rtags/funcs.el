@@ -60,5 +60,5 @@
       (spacemacs/set-leader-keys-for-major-mode mode
         "gg" 'rtags-find-symbol-at-point
         "gu" 'rtags-find-all-references-at-point
-        "gf" 'rtags-find-all-functions-called-this-function
+        "gf" 'rtags-find-functions-called-by-this-function
         "gi" 'rtags-index-project))))
