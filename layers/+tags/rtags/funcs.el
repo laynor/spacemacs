@@ -58,6 +58,8 @@
     (let ((hook (intern (concat (symbol-name mode) "-hook"))))
       (add-hook hook 'spacemacs/rtags-local-set-keys)
       (spacemacs/set-leader-keys-for-major-mode mode
+        "RET" 'rtags-fix-fixit-at-point
+        "r" 'rtags-rename-symbol
         "gg" 'rtags-find-symbol-at-point
         "gu" 'rtags-find-all-references-at-point
         "gf" 'rtags-find-functions-called-by-this-function
