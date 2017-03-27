@@ -44,6 +44,8 @@
       (spacemacs/rtags-define-keys-for-mode 'objc-mode))
     :config
     (progn
+      (add-hook 'c-mode-common-hook 'rtags-start-process-unless-running)
+      (add-hook 'c++-mode-common-hook 'rtags-start-process-unless-running)
       (when rtags-enable-company-backend
         (require 'company-rtags)
         (push 'company-rtags company-backends-c-mode-common)))))

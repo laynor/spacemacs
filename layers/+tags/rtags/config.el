@@ -9,9 +9,9 @@
 ;;
 ;;; License: GPLv3
 
-(spacemacs|defvar-company-backends c-mode)
-(spacemacs|defvar-company-backends c++-mode)
-(spacemacs|defvar-company-backends objc-mode)
+;; (spacemacs|defvar-company-backends c-mode)
+;; (spacemacs|defvar-company-backends c++-mode)
+;; (spacemacs|defvar-company-backends objc-mode)
 
 (defvar rtags-enable-company-backend t
   "If non nil, push the rtags company backend to company-backends")
