@@ -30,7 +30,14 @@
 ;;; Code:
 
 (defconst rtags-packages
-  '(rtags))
+  '(rtags
+    company-rtags))
+
+(defun rtags/init-company-rtags ()
+  (use-package company-rtags
+    :defer t
+    :config
+    (push 'company-rtags company-backends-c-mode-common)))
 
 (defun rtags/init-rtags ()
   (use-package rtags
@@ -46,8 +53,6 @@
     (progn
       (add-hook 'c-mode-common-hook 'rtags-start-process-unless-running)
       (add-hook 'c++-mode-common-hook 'rtags-start-process-unless-running)
-      (when rtags-enable-company-backend
-        (require 'company-rtags)
-        (push 'company-rtags company-backends-c-mode-common)))))
+      )))
 
 ;;; packages.el ends here
