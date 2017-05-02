@@ -59,7 +59,8 @@
       (add-hook hook 'spacemacs/rtags-local-set-keys)
       (spacemacs/set-leader-keys-for-major-mode mode
         "RET" 'rtags-fix-fixit-at-point
-        "r" 'rtags-rename-symbol
+        "rr" 'rtags-rename-symbol
+        "rd" 'rtags-create-doxygen-comment
         "gg" 'rtags-find-symbol-at-point
         "gu" 'rtags-find-all-references-at-point
         "gf" 'rtags-find-functions-called-by-this-function
